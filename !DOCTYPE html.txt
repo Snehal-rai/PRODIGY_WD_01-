@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shikha Constructions - Team</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(180deg, #ecf0f1, #bdc3c7);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, #2980b9, #3498db);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .team-member {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #2980b9, #3498db);
+            color: #ecf0f1;
+        }
+
+        h2,
+        h3 {
+            color: #3498db;
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 40px 0;
+        }
+
+        /* Advanced features */
+
+        .glow-text {
+            font-size: 1.8em;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .pulse-animation {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Additional Advanced Features */
+
+        .animated-text {
+            display: inline-block;
+            position: relative;
+            font-size: 1.5em;
+            overflow: hidden;
+        }
+
+        .animated-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #3498db;
+            transform-origin: 100% 50%;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .animated-text:hover::after {
+            transform-origin: 0% 50%;
+            transform: scaleX(1);
+        }
+
+        /* New styles for the navigation menu */
+
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .nav-list a:hover {
+            color: #ffcc00;
+        }
+
+        /* New content styling for the home section */
+
+        #home {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        #home h1 {
+            font-size: 3em;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Timeline section styling */
+
+        .timeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            margin: 20px 0;
+            background: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+
+        /* Skill Bar Section Styling */
+
+        .skills-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .skill-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            width: 120px;
+            color: #555;
+        }
+
+        .skill-bar-container {
+            flex-grow: 1;
+            background: #ecf0f1;
+            border-radius: 10px;
+            height: 15px;
+            margin-left: 20px;
+            overflow: hidden;
+        }
+
+        .skill-bar-value {
+            height: 100%;
+            background: #3498db;
+        }
+
+        /* Contact Section Styling */
+
+        #contact {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group button {
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .form-group button:hover {
+            background: #2980b9;
+        }
+
+        /* Responsive styling */
+
+        @media only screen and (max-width: 768px) {
+            .team-member {
+                width: 100%;
+            }
+
+            .timeline-item {
+                width: 90%;
+            }
+
+            .skill-name {
+                width: 80px;
+            }
+
+            .skill-bar-container {
+                margin-left: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header style="background-color: #4682b4; padding: 20px 0; position: relative; width: 80%; max-width: 1200px;">
+    <nav class="navbar" id="navbar">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <!-- Larger Square Logo Image in the Center -->
+
+            <!-- Company Name on the Next Line -->
+            <h1 class="pulse-animation" style="text-align: center; color: #fff;" style="color: #333; text-align: center;">Shikha Constructions</h1>
+            <h2 class="glow-text" style="color: #8B4513; font-size: 24px; text-align: center;">Building Dreams, Innovating Reality</h2>
+            <!-- Navigation List on the Next Line with Gap -->
+            <ul class="nav-list" style="list-style: none; margin: 15px 0 0; padding: 0; display: flex; gap: 20px;">
+                <li><a href="#home" style="text-decoration: none; color: #fff; font-size: 16px; transition: color 0.3s;">Home</a></li>
+                <li><a href="#about" style="text-decoration: none; color: #fff; font-size: 16px; transition: color 0.3s;">About</a></li>
+                <li><a href="#services" style="text-decoration: none; color: #fff; font-size: 16px; transition: color 0.3s;">Services</a></li>
+                <li><a href="#portfolio" style="text-decoration: none; color: #fff; font-size: 16px; transition: color 0.3s;">Portfolio</a></li>
+                <li><a href="#contact" style="text-decoration: none; color: #fff; font-size: 16px; transition: color 0.3s;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+
+<section id="home" class="section" style="background-color: #f0f0f0;">
+    <div class="home-content" style="text-align: center;">
+
+        <!-- Logo Image -->
+        <img src="C:\Users\HP\Downloads\Shikha Logo.png" alt="Company Logo" style="max-width: 200px; height: auto; margin-bottom: 20px;">
+
+        <hr>
+	<!-- Company Name and Slogan -->
+        <h1 class="glow-text animated-text" style="color: #8B4513;">Welcome to Shikha Constructions</h1>
+        <p>Your Trusted Partner in Building Dreams</p>
+
+        <!-- Call-to-Action Button -->
+        <a href="#services" class="btn animated-text">Explore Our Services</a>
+    </div>
+
+    <!-- Quotes Section -->
+    <div class="attractive-thoughts" style="text-align: center;">
+        <p class="thought">"Building not just structures, but the dreams and aspirations of our clients."</p>
+        <p class="thought">"Crafting spaces that inspire, innovate, and endure the test of time."</p>
+        <p class="thought">"Every project is a canvas, and we paint it with passion, precision, and excellence."</p>
+    </div>
+</section>
+
+<style>
+    /* Additional Styles for Advanced Features in Header Section */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Additional Styles for Advanced Features in Welcome Image */
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .image-frame {
+        display: inline-block;
+        padding: 10px;
+        border: 2px solid #3498db;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .image-frame img {
+        width: 150px; /* Adjust the size as needed */
+        height: 150px; /* Adjust the size as needed */
+        object-fit: cover;
+    }
+</style>
+
+
+
+    <section id="about" class="section" style="background-color: #f8f9fa;">
+    <div class="about-container">
+        <h2 style="color: #333; text-align: center;">About Us</h2>
+        <p style="text-align: center; style="color: #333">Welcome to Shikha Constructions, where dreams take shape, and structures become legacies.Founded with a vision to redefine excellence in construction, Shikha Constructions has been a trusted name in the industry for 8 years. We specialize in delivering high-quality construction projects that blend innovation, precision, and functionality.</p>
+        </div>
+
+        <div class="mission-vision-targets">
+            <div class="mission-block">
+                <h3 style="color: #e74c3c;">Our Mission</h3>
+                <p style="color: #e74c3c;">Empowering Dreams, Building Futures. At Shikha Constructions, our mission is to create enduring structures that transcend time, combining innovation, quality, and sustainability.</p>
+            </div>
+
+            <div class="vision-block">
+                <h3 style="color: #3498db;">Our Vision</h3>
+                <p style="color: #3498db;">Shaping environments that inspire and contribute to the growth and well-being of communities we serve.</p>
+            </div>
+
+            <div class="targets-block">
+                <h3 style="color: #27ae60;">Our Targets</h3>
+                <ul style="list-style: style="color: #27ae60;" none; padding: 0;">
+                    <li style="color: #27ae60;">Providing exceptional craftsmanship</li>
+                    <li style="color: #27ae60;">Ensuring client satisfaction</li>
+                    <li style="color: #27ae60;">Embracing sustainable and efficient building practices</li>
+                    <li style="color: #27ae60;">Contributing to the growth of communities through thoughtful construction</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section id="services">
+        <h2 class="pulse-animation" style="color: #3498db; text-align: center; margin-bottom: 20px;">Our Services</h2>
+    <hr style="border: 1px solid #3498db; margin: 0 auto 20px auto; width: 50%;">
+        <p style="color: #555; max-width: 800px; text-align: center; margin: 0 auto 30px auto;">At Shikha Constructions, we offer a comprehensive range of services to meet the diverse needs of our clients. Our dedicated team of professionals ensures excellence in every project we undertake. Explore our services below:</p>
+
+        <!-- Service Cards Container -->
+        <div class="service-cards-container">
+
+            <!-- Service Cards -->
+            <div class="service-card">
+                <img src="C:\Users\HP\Downloads\residetnial construction.jpg" alt="Service 1 Image">
+                <h3>Residential Construction</h3>
+                <p>Building dream homes with precision and quality craftsmanship. From design to completion, we make your vision a reality.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="C:\Users\HP\Downloads\commerical develoment.jpg" alt="Service 2 Image">
+                <h3>Commercial Development</h3>
+                <p>Strategic planning and execution of commercial projects. Our expertise ensures timely delivery and cost-effective solutions.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="C:\Users\HP\Downloads\Renovation & Remodeling.jpg" alt="Service 3 Image">
+                <h3>Renovation & Remodeling</h3>
+                <p>Breathe new life into existing spaces. Our renovation services enhance functionality and aesthetics to meet modern standards.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="C:\Users\HP\Downloads\Infrastructure Development.jpg" alt="Service 4 Image">
+                <h3>Infrastructure Development</h3>
+                <p>Contributing to the growth of communities through the construction of essential infrastructure. We prioritize sustainability and efficiency.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="C:\Users\HP\Downloads\Project Management.jpg" alt="Service 5 Image">
+                <h3>Project Management</h3>
+                <p>End-to-end project management services, ensuring smooth coordination and successful completion of construction projects.</p>
+            </div>
+
+            <!-- Add more service cards as needed -->
+
+        </div>
+    </section>
+    <style>
+    /* Additional Styles for Advanced Features */
+    .service-cards-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .service-card {
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        background: #ecf0f1;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+    }
+
+    .service-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover img {
+        transform: scale(1.2);
+    }
+</style>
+    <!-- Skill Bar Section -->
+<section class="skills-section" style="background-color: #f9f9f9; padding: 40px 20px;">
+    <h2 style="color: #3498db; text-align: center; margin-bottom: 20px;">Our Expertise</h2>
+
+    <div class="skill-bar">
+        <div class="skill-name" style="color: #333;">Project Management</div>
+        <div class="skill-bar-container">
+            <div class="skill-bar-value" style="width: 80%; background-color: #3498db;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name" style="color: #333;">Construction Quality</div>
+        <div class="skill-bar-container">
+            <div class="skill-bar-value" style="width: 90%; background-color: #27ae60;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name" style="color: #333;">Innovation</div>
+        <div class="skill-bar-container">
+            <div class="skill-bar-value" style="width: 84%; background-color: #e74c3c;"></div>
+        </div>
+    </div>
+
+    <!-- Add more skill bars as needed -->
+    <div class="skill-bar">
+        <div class="skill-name" style="color: #333;">Sustainability</div>
+        <div class="skill-bar-container">
+            <div class="skill-bar-value" style="width: 78%; background-color: #f39c12;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name" style="color: #333;">Client Satisfaction</div>
+        <div class="skill-bar-container">
+            <div class="skill-bar-value" style="width: 88%; background-color: #9b59b6;"></div>
+        </div>
+    </div>
+
+    <!-- Additional Skill Bars -->
+
+</section>
+
+<!-- Additional Styles for Advanced Features in Skill Bar Section -->
+<style>
+    .skills-section {
+        text-align: center;
+    }
+
+    .skill-bar {
+        margin-bottom: 20px;
+    }
+
+    .skill-name {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .skill-bar-container {
+        width: 100%;
+        background-color: #ecf0f1;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 20px;
+    }
+
+    .skill-bar-value {
+        height: 100%;
+        transition: width 1s ease;
+    }
+</style>
+
+    <section id="portfolio">
+    <h2 class="pulse-animation" style="color: #3498db; text-align: center; margin-bottom: 20px;">Our Portfolio</h2>
+    <hr style="border: 1px solid #3498db; margin: 0 auto 20px auto; width: 50%;">
+
+    <p style="color: #555; max-width: 800px; text-align: center; margin: 0 auto 30px auto;">Explore our diverse portfolio showcasing the excellence and quality of our construction projects. Click on the images to view details of each project.</p>
+
+    <!-- Portfolio Images Container -->
+    <div class="portfolio-images-container">
+
+        <!-- Portfolio Images -->
+        <div class="portfolio-item">
+            <img src="C:\Users\HP\Downloads\Residential Project.jpg" alt="Project 1 Image">
+            <div class="portfolio-item-details">
+                <h3 style="color: #333;">Residential Project</h3>
+                <p>A modern residential building with state-of-the-art amenities.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="C:\Users\HP\Downloads\Commercial Complex.jpg" alt="Project 2 Image">
+            <div class="portfolio-item-details">
+                <h3 style="color: #333;">Commercial Complex</h3>
+                <p>An innovative commercial space designed for maximum productivity.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="C:\Users\HP\Downloads\Renovation Project.jpg" alt="Project 3 Image">
+            <div class="portfolio-item-details">
+                <h3 style="color: #333;">Renovation Project</h3>
+                <p>Transforming existing spaces into modern, functional environments.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="C:\Users\HP\Downloads\nfrastructure Development.jpg" alt="Project 4 Image">
+            <div class="portfolio-item-details">
+                <h3 style="color: #333;">Infrastructure Development</h3>
+                <p>Contributing to the growth of communities through essential infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="C:\Users\HP\Downloads\Commercial Project.jpg" alt="Project 5 Image">
+            <div class="portfolio-item-details">
+                <h3 style="color: #333;">Commercial Project</h3>
+                <p>Strategic planning and execution for a successful commercial venture.</p>
+            </div>
+        </div>
+
+        <!-- Add more portfolio items as needed -->
+
+    </div>
+</section>
+
+<!-- Additional Styles for Advanced Features in Portfolio Section -->
+<style>
+    .portfolio-images-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .portfolio-item {
+        width: 300px;
+        margin: 20px;
+        background: #ecf0f1;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+        transform: scale(1.05);
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid #3498db;
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-item-details {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .portfolio-item h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-item p {
+        color: #555;
+    }
+
+    .portfolio-item:hover img {
+        transform: scale(1.2);
+    }
+</style>
+
+    <section class="timeline">
+        <h2 style="text-align: center;">Our Journey</h2>
+        <div>
+            <h3 style="text-align: center;">Founded Shikha Constructions</h3>
+            <p style="text-align: center;">Established Shikha Constructions with a vision to deliver high-quality construction projects.</p>
+        </div>
+
+        <div>
+            <h3 style="text-align: center;">Expansion</h3>
+            <p style="text-align: center;">Expanded our services to cover a wider range of construction and development projects.</p>
+        </div>
+
+        <div>
+            <h3 style="text-align: center;">Recognition</h3>
+            <p style="text-align: center;">Received industry recognition and awards for our commitment to excellence in construction.</p>
+        </div>
+
+        <div>
+            <h3 style="text-align: center;">Future Goals</h3>
+            <p style="text-align: center;">Continuing to innovate and strive for excellence in every project we undertake.</p>
+        </div>
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById("navbar");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.style.backgroundColor = "#555";
+                } else {
+                    navbar.style.backgroundColor = "transparent";
+                }
+            });
+        });
+    </script>
+    <style>
+    /* Global Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        text-align: center;
+        margin: 40px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    hr {
+        border: 1px solid #3498db;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    /* Team Member Styles */
+    .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-member {
+        width: 200px;
+        margin: 20px;
+        padding: 15px;
+        background-color: #ecf0f1;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+        transform: scale(1.05);
+    }
+
+    .team-member img {
+        width: 100%;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    h3, p {
+        margin: 0;
+        color: #333;
+    }
+</style>
+    <main>
+        <h2 class="pulse-animation ">Meet Our Team</h2>
+        <hr>
+        <h3>Leadership/Management Team</h3>
+        <section class="team-members">
+            <!-- Individual team member cards -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\1.jpg" alt="Team Member 1">
+                <h3>Prathm Arora</h3>
+                <p>Founder/ CEO</p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\2.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Founder/CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\3.jpg" alt="Team Member 3">
+                <h3>John Doe</h3>
+                <p>Founder/CEO</p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\Team 1.jpg" alt="Team Member 4">
+                <h3>Aman Raut</h3>
+                <p>VP. Development and Growth </p>
+
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\team 2.jpg" alt="Team Member 5">
+                <h3>Shreya Shrivastav</h3>
+                <p>VP, Finance and operation</p>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <h3>Finance and Operation Team</h3>
+        <hr>
+        <section class="team-members">
+            <!-- Individual team member cards -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\1.jpg" alt="Team Member 1">
+                <h3>Shubham Nagada </h3>
+                <p>Finance Head </p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\2.jpg" alt="Team Member 2">
+                <h3>Sumit yadav </h3>
+                <p>Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\3.jpg" alt="Team Member 3">
+                <h3>Sarthak Patil </h3>
+                <p>Associate Manager </p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\Team 1.jpg" alt="Team Member 4">
+                <h3>Aadarsh Yadav</h3>
+                <p>Marketing Officer </p>
+
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\team 2.jpg" alt="Team Member 5">
+                <h3>Payal Gupta</h3>
+                <p>Sales Officer</p>
+
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\2.jpg" alt="Team Member 2">
+                <h3>Navin Rawat </h3>
+                <p>Sales Excetiuve</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\3.jpg" alt="Team Member 3">
+                <h3>Gurprret Singh </h3>
+                <p>Project Manager</p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\Team 1.jpg" alt="Team Member 4">
+                <h3>Aman Khurraan</h3>
+                <p>Cheif Eceutive officer </p>
+
+        </section>
+    </main>
+
+    <main>
+        <h3>Development Team</h3>
+        <hr>
+        <section class="team-members">
+            <!-- Individual team member cards -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\team 3.jpg" alt="Team Member 1">
+                <h3>Shruti Gupta </h3>
+                <p>Software Engineer </p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\team 4.jpg" alt="Team Member 2">
+                <h3>Nandini Pawar</h3>
+                <p>Software Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\am 5.jpg" alt="Team Member 3">
+                <h3>soniya Manavar</h3>
+                <p>Software Engineer</p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\team 6.jpg" alt="Team Member 4">
+                <h3>Gouri Raut</h3>
+                <p>Software Engineer </p>
+
+            </div>
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\team 7.jpg" alt="Team Member 5">
+                <h3>Mayan Kumar</h3>
+                <p>Software Engineer</p>
+
+            </div>
+
+            <!-- Repeat the above structure for each team member -->
+            <div class="team-member">
+                <img src="C:\Users\HP\Downloads\Team 1.jpg" alt="Team Member 4">
+                <h3>Shubham Raut</h3>
+                <p>Software Engineer </p>
+
+
+
+        </section>
+    </main>
+
+    
+    <!-- Contact Section -->
+<section id="contact" class="section" style="background-color: #f9f9f9; padding: 60px 0;">
+    <div style="text-align: center;">
+        <h2 style="color: #333;">Contact Us</h2>
+        <p style="color: #555; max-width: 600px; margin: 0 auto 30px auto;">Have a question or want to discuss a project? Feel free to get in touch with us.</p>
+    </div>
+
+    <div class="contact-form" style="max-width: 600px; margin: 0 auto;">
+        <form>
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="display: block; color: #333; margin-bottom: 5px;">Your Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="email" style="display: block; color: #333; margin-bottom: 5px;">Your Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="message" style="display: block; color: #333; margin-bottom: 5px;">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+            </div>
+
+            <div>
+                <button type="submit" style="background-color: #3498db; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Additional Styles for Advanced Features -->
+<style>
+    .section {
+        padding: 80px 0;
+    }
+
+    .contact-form form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .contact-form button {
+        background-color: #3498
+
+    <footer>
+        <p>&copy; Shikha Constructions</p>
+        <p>Contact us: shikhaconstructions@gmail.com</p>
+    </footer>
+
+    <script>
+       
